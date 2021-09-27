@@ -11,21 +11,42 @@
 <body>
     <header> Answer all the questions before the timer runs out</header>
 
+    <!-- start button -->
     <div>
         <button type = "button" id = "startButton"> Start </button>
+    </div>  
+
+    <!-- quiz box -->
+    <div class ="quizbox">
+        <header>
+            <div id="timer">
+                <p>Timer</p>
+                <p id="timercontainer"> 00:60</p>
+            </div>
+         </header>
+         <div class="questions_box">
+        <!-- a box for questions from java-->
+         </div>
+         <div class="options_list">
+        <!-- options list from java -->
+         </div>
     </div>
 
-    <div id="timer">
-        <p>Timer</p>
-        <p id="timercontainer"> 00:60</p>
-    </div>
-
-
-    <div id="highscorecontainer">
-        <button type="button" id="highScores"> High Scores </button>
-    </div>
-
-
+    <!-- Results box -->
+    <section>
+        <div class = result_box>
+            <div id="highscorecontainer">
+                <button type="button" id="high_scores"> High Scores </button>
+            </div>
+            <div class = win-loss-box>
+                <h2>Wins: <span class="win">0 </span> </h2>
+                <h2>Losses: <span class="lose">0</span></h2>
+            </div>
+            <div = class="result_button">
+                <button type="button" id="restart_button">Restart</button>
+            </div>
+        </div>  
+    </section>
 
     <script src="./asset/js/script.js"></script>
     <script src="asset/js/questions.js"></script>

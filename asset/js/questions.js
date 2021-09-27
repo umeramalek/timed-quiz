@@ -1,5 +1,6 @@
 // creating an array of questions with correct answer and choices 
-let questions = [ {
+let questions = [ 
+{
     Number:1,
     question: "How many continents are there?",
     answer: "b: 7",
@@ -110,4 +111,4 @@ let questions = [ {
     ]
 },
 
-]
+];

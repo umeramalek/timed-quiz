@@ -48,5 +48,22 @@ header {
 
 #highscorecontainer {
     display:flex;
+    padding-left:100px;  
+}
+
+.result_button {
+    display: flex;
     padding-left:100px;
+}
+
+#high_scores {
+    background-color: rgb(190, 145, 231);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#restart_button {
+    background-color: rgb(190, 145, 231);
+    font-weight: bolder;
+    font-size: 20px;
 }
