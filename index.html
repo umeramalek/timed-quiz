@@ -9,21 +9,28 @@
 
 </head>
 <body>
-    <header> Answer all the questions before the timer runs out</header>
-
-    <!-- start button -->
-    <div>
+    <header class="top-container">
+        <div class="highscorecontainer">
+            <button type="button" id="high_scores"> High Scores </button>
+        </div>
+        <div class="timer-container">
+            <p>Timer: <span id="timer"></span></p>
+        </div>
+        <div class="questionsAnswered-container">
+            <p>Questions: <span id="questionsAnswered">1</span>/10</p>
+        </div>
+    </header>
+    
+    <div class = "title-container">
+        <h1 class = "title">General Knowledge Quiz</h1>
+        <p> Answer all the questions before the timer runs out. For every right answer, 10 seconds are added to the time, and for every wrong answer 5 seconds are taken from the time.</p>
         <button type = "button" id = "startButton"> Start </button>
-    </div>  
+    </div>
+
+
 
     <!-- quiz box -->
     <div class ="quizbox">
-        <header>
-            <div id="timer">
-                <p>Timer</p>
-                <p id="timercontainer"> 00:60</p>
-            </div>
-         </header>
          <div class="questions_box">
         <!-- a box for questions from java-->
          </div>
@@ -32,20 +39,30 @@
          </div>
     </div>
 
-    <!-- Results box -->
-    <section>
-        <div class = result_box>
-            <div id="highscorecontainer">
-                <button type="button" id="high_scores"> High Scores </button>
-            </div>
-            <div class = win-loss-box>
-                <h2>Wins: <span class="win">0 </span> </h2>
-                <h2>Losses: <span class="lose">0</span></h2>
-            </div>
-            <div = class="result_button">
+    <!-- score box to view your score  -->
+    <div class="correctlyAnswered">
+        <p>Correctly Answered: <span id="score">0</span></p>
+    </div>
+
+    <!-- name box to put in you name -->
+    <div>
+        <div class="scoreNameContainer">
+            <h4>Enter your name</h4>
+            <input id="scoreName" type="text">
+            <button id="submitBtn">Submit & View Scores</button>
+        </div>
+
+        <div class="highscoresBox">
+            <div id="nameHeading">Name</div>
+            <div id="scoreHeading">Score</div>
+            <div id="line"></div>
+        </div>
+        <!-- Restart box -->
+        <section>
+            <div = class="restart_box">
                 <button type="button" id="restart_button">Restart</button>
             </div>
-        </div>  
+
     </section>
 
     <script src="./asset/js/script.js"></script>
@@ -59,7 +76,9 @@
 1. i want to create a time quiz game where I want these functions:
     1. I want there to be a start button -> so the user can start the game
         *in html make it a clickable button, in java make use addEventListener
-    2. I want a timer(for 60sec),once the start button is pressed, that should trigger the timer to start 
+    2. I want a timer(for 120sec),once the start button is pressed, that should trigger the timer to start 
+        * the timer should subtract 5 sec for every wrong answer
+        * and for every right answer add 10 secs
     3. once the start button is pressed I want their to be a questions
         * multiple choice
         * for multiple choice questions in java create a questions container and also create an answer container for the right answer
@@ -73,6 +92,7 @@
     13. once the view high score is clicked, show all scores
         * make it an array - in descending order
         * make sure to make the initial score 0, when the user plays for the first time
+        * make a container for wiritng name to store the score
     14. create a restart button 
         * when clicked the quiz restartes
  -->
