@@ -129,3 +129,20 @@ body {
     cursor: pointer; 
 
 }
+#timeout {
+    display: none;
+    color: white;
+    background: red;
+}
+
+#wrong {
+    display: none;
+    color: white;
+    background: red;
+}
+
+#correct {
+    display: none;
+    color: white;
+    background: rgb(7, 161, 7);
+}
