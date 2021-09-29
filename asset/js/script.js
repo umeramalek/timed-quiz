@@ -182,7 +182,7 @@ function endpage() {
     quizStyle();
   endScreen.style.display = "flex";
   submitButton.addEventListener("click", function () {
-    let scoresObject = { userName: nameInput.value.trim(), userScore: score, timerText: style.display = "none"};
+    let scoresObject = { userName: nameInput.value.trim(), userScore: score};
     if (typeof localStorage.getItem("scores") == "object") {
       scoresArray.push(scoresObject);
       localStorage.setItem("scores", JSON.stringify(scoresArray));
@@ -220,7 +220,8 @@ startButton.addEventListener("click", function () {
     }
   });
 
-// Click answer - add to score if correct, go to next question
+// when correct answer is clicked, add to the score and go on to the next question
+
 answersBox.addEventListener("click", function (event) {
     if (questionIndex === codeQuiz.length) {
       endpage();
@@ -268,6 +269,7 @@ function loadHighscores() {
     for (let i = 0; i < theHighScores.length; i++) {
       var nameStyle = document.createElement("div");
       var scoreStyle = document.createElement("div");
+    //   style the end page to make it readable
       scoreName.appendChild(nameStyle);
       scoreName.appendChild(scoreStyle);
       nameStyle.style.display = "flex";
