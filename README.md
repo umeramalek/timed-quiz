@@ -35,7 +35,11 @@ I created a 10 question coding quiz on jaavscipt. This is a timed quiz, for ever
 
 ### Images
 
-
+![](asset/images/photo1.png)
+![](asset/images/photo2.png)
+![](asset/images/photo3.png)
+![](asset/images/photo4.png)
+![Alt Text](asset/images/timedquizgiphy.gif)
 
 ## Built With
 
